@@ -26,12 +26,14 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('/api/notes', {
+console.log('insdie getNotes index.js')
+  let notes = fetch('/api/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   });
+  console.log(notes);
 
 const saveNote = (note) =>
   fetch('/api/notes', {
