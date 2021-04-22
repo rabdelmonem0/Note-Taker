@@ -4,7 +4,7 @@ const note = require('../db/note')
 
 // when loaclhost:3000/api/notes 
 router.get('/notes', (req, res) => {
-  //  const notes = note.read()
+//    const notes = note.read()
   //  res.jason(notes);
   note.getNotes()
     .then((notes) => {
@@ -15,6 +15,11 @@ router.get('/notes', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
+    note.addNote(req.body)
+    .then((notes) => {
+        return res.json(notes)
+    })
+    .catch(err => res.status(500).json(err))
     // utilize your note.addNote(req.body) function
         // .then()
         // . catch()
