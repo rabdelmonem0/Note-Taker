@@ -14,7 +14,7 @@ router.get('/notes', (req, res) => {
     .catch(err => res.status(500).json(err));
 });
 
-router.post('/notes', (req, res) => {
+router.post('/notes', async (req, res) => {
     note.addNote(req.body)
     .then((notes) => {
         return res.json(notes)
@@ -26,6 +26,11 @@ router.post('/notes', (req, res) => {
 });
 
 router.delete('/notes/:id', (req, res) => {
+    // const deleteNotes = note.destroy({
+    //     where: {
+    //         notes/:id: req.params.notes/:id,
+    //     }
+    // })
     // utilizie a note.deleteNote(req.params.id)
 })
 
