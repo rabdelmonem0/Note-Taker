@@ -22,7 +22,7 @@
   ## Usage
   In the terminal run ``node server.js`` to get the app to listen to the PORT. Once the app is live click on get started to add a new note. Notes can be saved and deleted.
 
-  ![Note-Taker-App](public/assets/Note Taker App.gif)  
+  ![Note-Taker-App](public/assets/Note-Taker-App.gif)  
 
   ## Contribution
   Rwan Abdelmonem
